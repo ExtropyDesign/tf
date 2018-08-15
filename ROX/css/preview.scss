@@ -1,0 +1,35 @@
+//Compile
+
+@mixin transition($transition...){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+@function transform-transition($time){
+  @return transform #{$time}s, -ms-transform #{$time}s, -webkit-transform #{$time}s, -moz-transform #{$time}s, -o-transform #{$time}s;
+}
+
+.preview-card{
+  overflow: hidden;
+  border-radius:15px;
+  border: 1px solid rgba(black,.2);
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(black,.1);
+  .image{
+    height: 500px;
+    img{
+      transform: translateY(0);
+      width:100%;
+      -webkit-transition: all 5s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+         -moz-transition: all 5s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+           -o-transition: all 5s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+              transition: all 5s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+    }
+    &:hover{
+      img{
+        transform: translateY(calc(-100% + 500px));
+      }
+    }
+  }
+}

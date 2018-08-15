@@ -1,0 +1,25 @@
+.preview-card {
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview-card .image {
+  height: 500px;
+}
+
+.preview-card .image img {
+  transform: translateY(0);
+  width: 100%;
+  -webkit-transition: all 5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* easeInOutCubic */
+}
+
+.preview-card .image:hover img {
+  transform: translateY(calc(-100% + 500px));
+}
