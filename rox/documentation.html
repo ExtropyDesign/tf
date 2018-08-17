@@ -26,9 +26,6 @@
       <a class="mobile"><i class="fas fa-bars"></i></a>
       <ul class="right">
         <li>
-          <a href="./documentation.html">Documentation</a>
-        </li>
-        <li>
           <a href="./Style_Guide.html">Style Guide</a>
         </li>
         <li><a href="#">Blocks <i class="fa fa-chevron-down"></i></a>
@@ -87,6 +84,7 @@
               <a href="#darkmode">Dark Mode</a>
               <a href="#imagebackground">Image Backgrounds</a>
               <a href="#videobackground">Video Backgrounds</a>
+              <a href="#scrollreveal">Scroll Reveal</a>
               <a href="#styles">Styles and Styling</a>
               <a href="#colors">Color</a>
               <a href="#custcolor">Custom Color</a>
@@ -385,15 +383,17 @@
                 </script>
               </div>
             </div>
-            <p>A video background can be added to any main section, but you will need to manually copy and paste the above code into place for any section outside of the Hero blocks. The Hero blocks will have the video background element present and commented
-              out.
-            </p>
+            <p>A video background can be added to any main section.</p>
             <h5>Other Section Classes</h5>
             <p>Following are a few other classes that can be added to the main section.</p>
             <table class="table">
               <tr>
                 <th>Class</th>
                 <th>Effect</th>
+              </tr>
+              <tr>
+                <td>p-none</td>
+                <td>No Top/Bottom padding.</td>
               </tr>
               <tr>
                 <td>p-xsmall</td>
@@ -408,6 +408,165 @@
                 <td>Large Top/Bottom padding of 9rem</td>
               </tr>
             </table>
+          </section>
+          <hr>
+          <section id="scrollreveal">
+            <h2>Scroll Reveal</h2>
+            <p>ROX& uses Scroll Reveal 3 for the 'slide-in' on scroll effect you can see in the included template files.</p>
+            <p>ROX& also uses some custom code in addition to Scroll Reveal in order to increase Scroll Reveal's functionality.</p>
+            <p>You can now define certain additional Scroll Reveal effects right in the html markup using data attribute. Don't know what those are, but you still want some content to reveal on scroll? Don't worry, there's a simple way to define a reveal target, read on!</p>
+            <h4>The Basics</h4>
+            <p>If you don't want to, or don't need to fuss around and get reveal effects tailored just right, <strong>all you need to do is add a class of 'sr' to any element you want to reveal on scroll</strong>.</p>
+            <p>That's it. This works with almost all elements, included the entire body element if you want (you probably shouldn't).</p>
+            <p>Want a bit more control? Read on.</p>
+            <h4>Advanced</h4>
+            <p>Do you know what a data attribute is? <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">Want To Learn?</a> If you want to have deeper control over the way your content reveals, you can use data attributes.</p>
+            <p>Let's take a look at each, remember that you should understand what a data attribute is first before using this functionality.</p>
+            <h5>Reveal Origin</h5>
+            <p>Use this data attribute to change the direction the content reveals from.</p>
+            <table class="table mb-5">
+              <tr>
+                <th scope="col">Attribute</th>
+                <th scope="col">Effect</th>
+              </tr>
+              <tr>
+                <td>data-sr-origin="left"</td>
+                <td>Content reveals from the <strong>Left</strong></td>
+              </tr>
+              <tr>
+                <td>data-sr-origin="right"</td>
+                <td>Content reveals from the <strong>Right</strong></td>
+              </tr>
+              <tr>
+                <td>data-sr-origin="top"</td>
+                <td>Content reveals from the <strong>Top</strong></td>
+              </tr>
+              <tr>
+                <td>data-sr-origin="bottom"</td>
+                <td>Content reveals from the <strong>Bottom</strong></td>
+              </tr>
+            </table>
+            <h5>Reveal Distance</h5>
+            <p>Use this data attribute to change the distance of the slide-in reveal.</p>
+            <table class="table mb-5">
+              <tr>
+                <th scope="col">Attribute</th>
+                <th scope="col">Effect</th>
+              </tr>
+              <tr>
+                <td>data-sr-distance="100px"</td>
+                <td>Content reveals from <strong>100px</strong> away</td>
+              </tr>
+              <tr>
+                <td>data-sr-distance="***px"</td>
+                <td>Remember: Any amount can be used</td>
+              </tr>
+            </table>
+            <h5>Reveal Duration</h5>
+            <p>Use this data attribute to change how long the content takes to fully reveal (in milliseconds).</p>
+            <table class="table mb-5">
+              <tr>
+                <th scope="col">Attribute</th>
+                <th scope="col">Effect</th>
+              </tr>
+              <tr>
+                <td>data-sr-duration="500"</td>
+                <td>Content takes <strong>500ms</strong> to fully reveal.</td>
+              </tr>
+              <tr>
+                <td>data-sr-duration="***px"</td>
+                <td>Remember: Any amount can be used</td>
+              </tr>
+            </table>
+            <h5>Reveal Scale</h5>
+            <p>Use this data attribute to change the scale of the element when it starts to reveal. The element will than grow or shrink to be scaled to 100% at the completion of the reveal.</p>
+            <table class="table mb-5">
+              <tr>
+                <th scope="col">Attribute</th>
+                <th scope="col">Effect</th>
+              </tr>
+              <tr>
+                <td>data-sr-scale="1"</td>
+                <td>No scale effect at all.</td>
+              </tr>
+              <tr>
+                <td>data-sr-scale="0"</td>
+                <td>Also no scale effect at all. Set to at least .1 for an effect.</td>
+              </tr>
+              <tr>
+                <td>data-sr-scale=".1"</td>
+                <td>Element will start at a scale of 10% and grow to 100%</td>
+              </tr>
+              <tr>
+                <td>data-sr-scale="2"</td>
+                <td>Element will start at a scale of 200% and shrink to 100%</td>
+              </tr>
+              <tr>
+                <td>data-sr-scale="***"</td>
+                <td>Remember: Any value can be used here.</td>
+              </tr>
+            </table>
+            <h5>Reveal Opacity</h5>
+            <p>Use this data attribute to change the opacity the element starts at.</p>
+            <table class="table mb-5">
+              <tr>
+                <th scope="col">Attribute</th>
+                <th scope="col">Effect</th>
+              </tr>
+              <tr>
+                <td>data-sr-opacity="0"</td>
+                <td>Element starts <strong>fully transparent</strong> and fades in.</td>
+              </tr>
+              <tr>
+                <td>data-sr-opacity=".1"</td>
+                <td>Element starts <strong>10% visible</strong> and fades in.</td>
+              </tr>
+              <tr>
+                <td>data-sr-opacity="1"</td>
+                <td>Element starts <strong>100% visible</strong></td>
+              </tr>
+              <tr>
+                <td>data-sr-opacity="***"</td>
+                <td class="small">Remember, any number between 0 - 1, including decimals can be used here.</td>
+              </tr>
+            </table>
+            <h5>Reveal Sets</h5>
+            <p>These are a bit more involved, but not by much. You can add elements into 'sets' to allow them to reveal as a cascade. That is, one revealing after the other. It's a pretty nice effect and you can find it on display at certain parts of the included templates.</p>
+            <p>Lets take a look at the markup</p>
+            <table class="table mb-5">
+              <tr>
+                <th scope="col">Attribute</th>
+                <th scope="col">Effect</th>
+              </tr>
+              <tr>
+                <td class="small">data-sr-set="*YOUR SET NAME*"</td>
+                <td class="small">Reveal all content with the same set name in a cascade based on HTML hierarchy.</td>
+              </tr>
+            </table>
+            <p>You probably already figured it out, but you add the above attribute, along with a 'set name' of your choice, to as many elements as you choose.</p>
+            <p>Those elements will than reveal in a cascade as soon as the first element is revealed.</p>
+            <p>As well, the attributes of the final element in the set hierarchy will be used for the entire set.</p>
+            <p>Lets take a look at a code example:</p>
+            <div class="code-block">
+              <div class="code-body">
+                <script type="text/plain" class="language-markup">
+                  <div class="sr" data-sr-set="dataset1">
+                    <!--STUFF IS IN HERE-->
+                  </div>
+                  <div class="sr" data-sr-set="dataset1">
+                    <!--STUFF IS IN HERE-->
+                  </div>
+                  <div class="sr" data-sr-set="dataset1">
+                    <!--STUFF IS IN HERE-->
+                  </div>
+                  <div class="sr" data-sr-set="dataset1" data-sr-origin="left" data-sr-distance="100px">
+                    <!--STUFF IS IN HERE-->
+                  </div>
+                </script>
+              </div>
+            </div>
+            <p>The 4 divs in that example will reveal in a cascade because they are all part of the same data-set ('dataset1')</p>
+            <p>The final div has other data attributes which will also be applied to every other elements in the hierarchy.</p>
           </section>
           <hr>
           <section id="styles">

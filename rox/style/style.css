@@ -739,7 +739,7 @@ a:hover {
   line-height: normal;
   color: #ff5274 !important;
   text-transform: uppercase;
-  font-weight: bold !important;
+  font-weight: bold;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -1906,62 +1906,103 @@ a.max, button.max {
 
 /* End of _footer.scss */
 .rox-gallery-card {
-  margin: 1rem 0;
-  padding: 10px;
-  background-color: white;
-  border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -webkit-box-shadow: 3px 3px 14px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 3px 3px 14px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 3px 14px rgba(0, 0, 0, 0.2);
-}
-
-.rox-gallery-card .internal {
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
   position: relative;
-  border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-}
-
-.rox-gallery-card .internal img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  -webkit-transition: transform 0.2s, -ms-transform 0.2s, -webkit-transform 0.2s, -moz-transform 0.2s, -o-transform 0.2s;
-  -moz-transition: transform 0.2s, -ms-transform 0.2s, -webkit-transform 0.2s, -moz-transform 0.2s, -o-transform 0.2s;
-  -o-transition: transform 0.2s, -ms-transform 0.2s, -webkit-transform 0.2s, -moz-transform 0.2s, -o-transform 0.2s;
-  transition: transform 0.2s, -ms-transform 0.2s, -webkit-transform 0.2s, -moz-transform 0.2s, -o-transform 0.2s;
-}
-
-.rox-gallery-card .internal .meta {
-  height: 100%;
+  max-width: 350px;
   width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  height: 250px;
+  margin: 15px auto;
+  background-color: red;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  -ms-transform: scale(1, 1);
+  /* IE 9 */
+  -webkit-transform: scale(1, 1);
+  /* Safari */
+  -moz-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transition: -webkit-box-shadow 0.3s, -moz-box-shadow 0.3s, box-shadow 0.3s, transform 0.3s, -ms-transform 0.3s, -webkit-transform 0.3s, -moz-transform 0.3s, -o-transform 0.3s;
+  -moz-transition: -webkit-box-shadow 0.3s, -moz-box-shadow 0.3s, box-shadow 0.3s, transform 0.3s, -ms-transform 0.3s, -webkit-transform 0.3s, -moz-transform 0.3s, -o-transform 0.3s;
+  -o-transition: -webkit-box-shadow 0.3s, -moz-box-shadow 0.3s, box-shadow 0.3s, transform 0.3s, -ms-transform 0.3s, -webkit-transform 0.3s, -moz-transform 0.3s, -o-transform 0.3s;
+  transition: -webkit-box-shadow 0.3s, -moz-box-shadow 0.3s, box-shadow 0.3s, transform 0.3s, -ms-transform 0.3s, -webkit-transform 0.3s, -moz-transform 0.3s, -o-transform 0.3s;
+  cursor: pointer;
 }
 
-.rox-gallery-card .internal .meta a {
+.rox-gallery-card > a:first-of-type {
+  position: absolute;
   display: block;
   height: 100%;
-  width: 50%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 6;
 }
 
-.rox-gallery-card:hover .internal img {
-  -ms-transform: scale(1.1, 1.1);
+.rox-gallery-card .image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.rox-gallery-card .image img {
+  height: 100%;
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  margin: 0 auto;
+}
+
+.rox-gallery-card .meta {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.rox-gallery-card .meta .content {
+  opacity: 0;
+  padding: 2rem;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.rox-gallery-card .meta .content .name {
+  letter-spacing: .15rem;
+}
+
+.rox-gallery-card .meta .content * {
+  color: white;
+}
+
+.rox-gallery-card:hover {
+  -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  -ms-transform: scale(1.04, 1.04);
   /* IE 9 */
-  -webkit-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.04, 1.04);
   /* Safari */
-  -moz-transform: scale(1.1, 1.1);
-  -o-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.04, 1.04);
+  -o-transform: scale(1.04, 1.04);
+  transform: scale(1.04, 1.04);
+}
+
+.rox-gallery-card:hover .meta {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.rox-gallery-card:hover .meta .content {
+  opacity: 1;
 }
 
 /* Start of _hero.scss */
