@@ -20,10 +20,20 @@
 
   </head>
   <body>
+    <!-- Start Of Pre-Loader -->
+    <section class="rox-loader">
+      <div class="loader">
+        <div class="pulse"></div>
+      </div>
+      <div class="loader-left"></div>
+      <div class="loader-right"></div>
+    </section>
+    <!-- End Of Pre-Loader -->
+
     <!-- Start Of Navbar -->
     <!-- A class of sticky along with data-sticky="true" forces the header to stick to the top of the page. -->
     <!-- Remove the class and the data variable to make the header block based  -->
-    <section class="rox rox-navbar-01 dark">
+    <section class="rox rox-navbar-01 dark sticky" data-sticky="true">
       <!-- Optional background texture -->
       <!-- <i class="background repeat opacity-6" style="background-image:url(./resources/patterns/pattern_dark_02.png)"></i> -->
       <div class="container">
@@ -93,8 +103,8 @@
 
     <!-- A simple hero -->
     <!-- This can be replace with any other included hero style -->
-    <section class="rox rox-hero-35 dark">
-      <i class="background opacity-3 fixed" style="background-image: url(./resources/backgrounds/bg_04.jpg)"></i>
+    <section class="rox rox-hero-50 dark">
+      <i class="background opacity-3 fixed" style="background-image: url(./resources/backgrounds/bg_13.jpg)"></i>
       <section class="center">
         <div class="container">
           <div class="col-12 col-lg-12 text-center">
@@ -104,18 +114,34 @@
       </section>
     </section>
 
-    <!-- The Blog -->
+    <!-- Start of Main Blog -->
     <section class="rox">
       <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-12 col-lg-9">
-            <!-- The main blog post -->
+        <div class="row row justify-content-between">
+          <!-- Start of Blog Content -->
+          <div class="col-12 col-md-9 col-lg-8 rox-blog-content">
+            <!-- Pagination -->
+            <div class="rox-pagination mb-4">
+              <!-- Pagination is a simple set of anchors with links -->
+              <a href="#">Prev</a>
+              <a href="#" class="current">1</a> <!-- The current page is denoted with the '.current' class -->
+              <a href="#">2</a>
+              <a href="#" class="d-none d-sm-inline-block">3</a> <!-- Some pages will only fit on larger sized screens. This link will display on 'small' screens and above -->
+              <a href="#" class="d-none d-sm-inline-block">4</a>
+              <p>...</p> <!-- Denotes a break in the link set, traditionally followed by links to the last few pages -->
+              <a href="#">9</a>
+              <a href="#">Next</a>
+            </div>
+            <!-- End of Pagination -->
+
+            <!-- A Single Blog Card -->
             <div class="rox-blog-page-card">
-              <!-- The main post image -->
+              <!-- The post's image -->
               <div class="image">
                 <img src="./resources/blog/blog_01.jpg" alt="">
+                <a href="#"></a>
               </div>
-              <!-- The post header, containing name, author, and meta data -->
+              <!-- The post's header, containing a title, author, and some meta data -->
               <div class="head">
                 <a href="#" class="title">The Title Of The Post</a>
                 <p class="author">By Srimbo Scrumbo</p>
@@ -124,15 +150,46 @@
                   <p><i class="fas fa-comments"></i>23 Comments</p>
                 </div>
               </div>
-              <!-- The main content of the post -->
+              <!-- The main preview content -->
               <div class="body">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#" class="read-more">Read More</a>
               </div>
               <hr>
-              <!-- The tags for the post -->
+              <!-- A collection of tags -->
+              <div class="tags">
+                <i class="fas fa-tags icon"></i>
+                <ul class="no-style list-inline-all">
+                  <!-- Tags are contained in an unordered list, each tag being an anchor contained inside a list item -->
+                  <li><a href="#">This</a></li>
+                  <li><a href="#">Is A</a></li>
+                  <li><a href="#">Set Of</a></li>
+                  <li><a href="#">Tags</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Of A Single Blog Card -->
+
+            <div class="rox-blog-page-card">
+              <div class="image">
+                <img src="./resources/blog/blog_02.jpg" alt="">
+                <a href="#"></a>
+              </div>
+              <div class="head">
+                <a href="#" class="title">The Title Of The Post</a>
+                <p class="author">By Srimbo Scrumbo</p>
+                <div class="meta">
+                  <p><i class="fas fa-calendar"></i>5/20/18</p>
+                  <p><i class="fas fa-comments"></i>23 Comments</p>
+                </div>
+              </div>
+              <div class="body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+              <hr>
               <div class="tags">
                 <i class="fas fa-tags icon"></i>
                 <ul class="no-style list-inline-all">
@@ -143,138 +200,58 @@
                 </ul>
               </div>
             </div>
-            <hr>
-            <!-- Simple Comment Section -->
-            <div class="rox-blog-comments">
-              <h2>Comments</h2>
-              <div class="rox-comment">
-                <div class="author-image">
-                  <img src="./resources/team/male_01.jpg" alt="">
-                </div>
-                <div class="body">
-                  <h6>Stavo Mctortino</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <i class="fas fa-reply reply"></i><a href="#" class="reply">Reply</a>
-                  <hr>
-                  <ul class="nested-comment">
-                    <div class="rox-comment">
-                      <div class="author-image">
-                        <img src="./resources/team/male_02.jpg" alt="">
-                      </div>
-                      <div class="body">
-                        <h6>Lars Bogon</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <i class="fas fa-reply reply"></i><a href="#" class="reply">Reply</a>
-                        <hr>
-                        <ul class="nested-comment">
-                          <div class="rox-comment">
-                            <div class="author-image">
-                              <img src="./resources/team/male_01.jpg" alt="">
-                            </div>
-                            <div class="body">
-                              <h6>Stavo Mctortino</h6>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                              <i class="fas fa-reply reply"></i><a href="#" class="reply">Reply</a>
-                              <hr>
-                              <ul class="nested-comment">
-
-                              </ul>
-                            </div>
-                          </div>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="rox-comment">
-                      <div class="author-image">
-                        <img src="./resources/team/female_01.jpg" alt="">
-                      </div>
-                      <div class="body">
-                        <h6>Limpy Buiscuy</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <i class="fas fa-reply reply"></i><a href="#" class="reply">Reply</a>
-                        <hr>
-                        <ul class="nested-comment">
-
-                        </ul>
-                      </div>
-                    </div>
-                  </ul>
+            <div class="rox-blog-page-card">
+              <div class="image">
+                <img src="./resources/blog/blog_03.jpg" alt="">
+                <a href="#"></a>
+              </div>
+              <div class="head">
+                <a href="#" class="title">The Title Of The Post</a>
+                <p class="author">By Srimbo Scrumbo</p>
+                <div class="meta">
+                  <p><i class="fas fa-calendar"></i>5/20/18</p>
+                  <p><i class="fas fa-comments"></i>23 Comments</p>
                 </div>
               </div>
-              <div class="rox-comment">
-                <div class="author-image">
-                  <img src="./resources/team/female_03.jpg" alt="">
-                </div>
-                <div class="body">
-                  <h6>Bippo</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <i class="fas fa-reply reply"></i><a href="#" class="reply">Reply</a>
-                  <hr>
-                  <ul class="nested-comment">
-
-                  </ul>
-                </div>
+              <div class="body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+              <hr>
+              <div class="tags">
+                <i class="fas fa-tags icon"></i>
+                <ul class="no-style list-inline-all">
+                  <li><a href="#">This</a></li>
+                  <li><a href="#">Is A</a></li>
+                  <li><a href="#">Set Of</a></li>
+                  <li><a href="#">Tags</a></li>
+                </ul>
               </div>
             </div>
-            <!-- Simple Post Form -->
-            <div class="rox-blog-post-comment">
-              <h2>Post Comment</h2>
-              <div class="container p-0">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-md-6">
-                    <input type="text" name="" value="" class="rox-input max" placeholder="Name">
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <input type="text" name="" value="" class="rox-input max" placeholder="Email">
-                  </div>
-                  <div class="col-12 text-center">
-                    <textarea name="name" rows="8" cols="80" class="rox-input max"></textarea>
-                    <button type="button" name="button" class="rox-button-thin pl-5 pr-5">Submit</button>
-                  </div>
-                </div>
-              </div>
+
+            <!-- Bottom Pagination -->
+            <div class="rox-pagination mt-4 mb-4 mb-md-0">
+                <a href="#">Prev</a>
+                <a href="#" class="current">1</a>
+                <a href="#">2</a>
+                <a href="#" class="d-none d-sm-inline-block">3</a>
+                <a href="#" class="d-none d-sm-inline-block">4</a>
+                <p>...</p>
+                <a href="#">9</a>
+                <a href="#">Next</a>
             </div>
           </div>
-          <!-- The Sidebar -->
-          <div class="d-none d-lg-block col-lg-3">
+          <!-- End of Blog Content -->
+
+          <!-- Start of Sidebar -->
+          <div class="col-12 d-md-block col-md-3 col-lg-3">
             <div class="rox-blog-sidebar">
-              <!-- Each segment is seperated into sections -->
+              <!-- Sidebar segments are seperated by sections -->
+              <!-- The sections can contain most HTML elements -->
               <section>
                 <div class="rox-input-icon-search max m-0">
                   <input type="search" name="" value="" class="rox-input max" placeholder="Search">
-                </div>
-              </section>
-              <section>
-                <h6>More Like This</h6>
-                <hr>
-                <!-- A mini blog card -->
-                <!-- Very little information regarding a blog post -->
-                <!-- Good for sidebar integration -->
-                <div class="rox-blog-card-mini">
-                  <a href="#"></a>
-                  <div class="image">
-                    <img src="./resources/blog/blog_01.jpg" alt="">
-                  </div>
-                  <div class="content">
-                    <p>Where Did Flowers Go?</p>
-                    <div class="meta">
-                      <p><i class="fas fa-calendar"></i>5/20/18</p>
-                      <p><i class="fas fa-comments"></i>23</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="rox-blog-card-mini">
-                  <a href="#"></a>
-                  <div class="image">
-                    <img src="./resources/blog/blog_01.jpg" alt="">
-                  </div>
-                  <div class="content">
-                    <p>Where Did Flowers Go?</p>
-                    <div class="meta">
-                      <p><i class="fas fa-calendar"></i>5/20/18</p>
-                      <p><i class="fas fa-comments"></i>23</p>
-                    </div>
-                  </div>
                 </div>
               </section>
               <section>
@@ -316,16 +293,19 @@
               </section>
             </div>
           </div>
+          <!-- End of Sidebar -->
         </div>
       </div>
     </section>
-    <!-- End of Blog -->
+    <!-- End of Main Blog -->
 
-    <!-- Start of Footer -->
-    <footer>
-      <!-- The <section> tag. Modify this tag as you do for any other block in ROX& -->
-      <!-- It is only contained in a <footer> for accessablilty -->
-      <section class="rox dark rox-footer p-small">
+    <!-- Start of Footer 1-->
+    <section class="rox rox-footer p-small dark">
+      <!-- Optional Image Background -->
+      <!-- <i class="background fixed" style="background-image: url(BACKGROUND_URL)"></i> -->
+      <!-- Optional Video Background -->
+      <!-- <video class="background opacity-2" src="VIDEO URL" autoplay muted loop></video> -->
+      <footer>
         <div class="container">
           <div class="row">
             <div class="col-12 text-center">
@@ -346,9 +326,9 @@
             </div>
           </div>
         </div>
-      </section>
-    </footer>
-    <!-- End of Footer -->
+      </footer>
+    </section>
+    <!-- End of Footer 1-->
 
     <!-- //////////////////////////////////////////////////////////////////// -->
     <!-- Start of Javascript -->
@@ -383,7 +363,7 @@
     <!-- edit map.js to change map location -->
     <script src="./js/map.js" type="text/javascript"></script>
     <!-- REMINDER: CHANGE API KEY -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=*YOUR API KEY KERE*&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=*YOUR API KEY HERE*&callback=initMap"></script>
 
     <!-- ROX& SCRIPTS -->
     <script src="./js/rox.js" type="text/javascript"></script>

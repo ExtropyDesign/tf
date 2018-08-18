@@ -2986,7 +2986,7 @@ section.rox[class*="rox-navbar"].mobile .sub {
   opacity: 1;
   visibility: visible;
   overflow-y: auto;
-  height: 200px;
+  max-height: 200px;
   background-color: rgba(0, 0, 0, 0.05);
 }
 
